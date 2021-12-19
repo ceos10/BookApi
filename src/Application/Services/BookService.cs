@@ -21,7 +21,6 @@ namespace Application.Services
             var books = await _bookRepository.GetListAsync();
             return _mapper.Map<IEnumerable<BookViewModel>>(books);
         }
-
         public async Task<BookViewModel> GetBook(int id)
         {
             var book = await _bookRepository.GetByIdAsync(id);
@@ -49,6 +48,9 @@ namespace Application.Services
         public async Task DeleteBook(int id)
         {
             var bookToDelete = await _bookRepository.GetByIdAsync(id);
+            if (bookToDelete is null)
+                return;
+
             await _bookRepository.DeleteAsync(bookToDelete);
         }
     }
