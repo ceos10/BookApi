@@ -1,8 +1,9 @@
 using NUnit.Framework;
+using UnitTests.Base;
 
 namespace UnitTests
 {
-    public class Tests
+    public class GetBooksTests : BookUnitTest
     {
         [SetUp]
         public void Setup()

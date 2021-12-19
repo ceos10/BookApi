@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<Compile Update="Base\BookUnitTestSetup.cs">
+	  <DependentUpon>BookUnitTest.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+	
+  <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
 
 </Project>
